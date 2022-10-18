@@ -8,7 +8,7 @@
 }
 
 .menu {
-  background-color: rgb(255, 79, 79);
+  background-color: rgba(255, 0, 0, 0.651);
   padding-bottom: 6rem;
 }
 
@@ -41,6 +41,18 @@
   color: white;
 }
 
+.flex-container.black > h2 {
+  color: black;
+}
+
+.flex-container.vertical {
+  flex-direction: column;
+}
+
+.flex-container.space-around {
+  justify-content: space-around !important;
+}
+
 .flex-container > h2 > p {
   font-size: 36px;
   font-weight: lighter;
@@ -66,8 +78,10 @@
   color: white !important;
 }
 
-body {
-  margin: 0%;
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -76,19 +90,99 @@ body {
   border-radius: 50%;
 }
 
-.contact-button {
-  width: 10%;
-  height: 1%;
-  background-color: white;
-  border-radius: 12%;
-  font-family: "Montserrat";
-  color: rgb(255, 79, 79) !important;
-}
-
 .slider-show {
   flex: 2 1 0%;
   padding-left: 2rem;
   align-items: flex-end;
+}
+
+.flex-container-commissions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.commission-item {
+  display: flex;
+  flex: 1 1 0;
+  margin: 2rem;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat";
+  font-size: 1.5rem;
+  color: rgb(71, 35, 35);
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.commission-image {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.quote-section {
+  background-color: rgb(71, 35, 35);
+  width: 100%;
+  opacity: 70%;
+}
+
+.flex-container.flex-quote {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-container > .quote {
+  font-family: "Montserrat";
+  color: white;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.flex-container > .author {
+  font-family: "Montserrat";
+  font-weight: bold;
+  color: white;
+  font-size: 1.5rem;
+  align-self: flex-end;
+}
+
+.contact-section {
+  background-color: rgb(255, 79, 79);
+  width: 65%;
+  margin-left: 17.5%;
+  margin-top: 3rem;
+  border: rgb(255, 79, 79) solid;
+  border-radius: 10px;
+}
+
+.contact-section > .flex-container {
+  display: flex;
+  margin-right: 1rem;
+}
+
+.contact-section > .flex-container > .contact {
+  font-family: "Montserrat";
+  color: white;
+  margin-right: 1.5rem;
+}
+
+.footer {
+  width: 100%;
+  background-color: rgb(255, 79, 79);
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer > p {
+  font-family: "Montserrat";
+  color: white;
+  margin-right: 1rem;
 }
 
 /* ------- BUTTON ANIMATION CSS ----------- */
@@ -149,19 +243,20 @@ body {
   background-color: #ffffff;
 }
 
-.button-48 span {
+.button-48 a {
   z-index: 1;
   position: relative;
   color: white;
+  text-decoration: none;
 }
 
 .button-48.menu-item {
-  background-color: rgb(255, 79, 79) !important;
+  background-color: rgba(255, 79, 79, 0) !important;
   margin-top: -3rem;
   font-size: 18px;
 }
 
-.button-48:hover span {
+.button-48:hover a {
   z-index: 1;
   position: relative;
   color: rgb(255, 79, 79) !important;
@@ -266,3 +361,80 @@ body {
   animation: slide 12300ms infinite;
 }
 /* Calculate AUTOPLAY for SLIDES - END */
+
+/* IMAGE ENLARGE ON HOVER ANIMATION */
+
+.wrap {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.wrap p {
+  position: absolute;
+  opacity: 0;
+  top: 100%;
+  left: -8%;
+  padding: 5px;
+  text-align: center;
+  width: 113%;
+  line-height: 20px;
+  font-size: 20px;
+  margin-top: -10px;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.7);
+  color: rgb(71, 35, 35);
+  font-family: "Montserrat";
+  transition: 1s;
+}
+
+.wrap img {
+  display: block;
+  border: rgb(255, 79, 79) solid;
+  border-radius: 5%;
+  width: 15rem;
+  height: 15rem;
+  -webkit-transition: opacity 0.26s ease-out;
+  -moz-transition: opacity 0.26s ease-out;
+  -ms-transition: opacity 0.26s ease-out;
+  -o-transition: opacity 0.26s ease-out;
+  transition: opacity 0.26s ease-out;
+  transition: 500ms;
+}
+#container:hover img {
+  opacity: 0.5;
+}
+#container:hover .wrap:hover img {
+  opacity: 1;
+  -webkit-transform: scale(1.7);
+  -moz-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  -o-transform: scale(1.7);
+  transform: scale(1.7);
+  z-index: 2;
+  position: relative;
+  transition: 500ms;
+}
+.wrap:hover p {
+  opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+  #container img {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+/* ---------------------------- */
+
+/* BACKGROUND ANIMATION */
+.background-animation {
+  position: absolute;
+  background: url("resources/art_making_gif.gif");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200%;
+  z-index: -1;
+  opacity: 20%;
+  background-size: cover;
+}

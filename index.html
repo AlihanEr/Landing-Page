@@ -8,27 +8,25 @@
     <title>Landing Page</title>
   </head>
   <body>
+    <img class="background-animation"/>
     <div class="menu">
       <header class="flex-container">
-        <button href="index.html" class="button-48">
-          <span
-            ><img src="resources/Athaum_logo.jpg" class="logo" />
+        <button class="button-48">
+          <a href="index.html">
+            <img src="resources/Athaum_logo.jpg" class="logo" />
             <p>A T H A U M</p>
-          </span>
+        </a>
         </button>
 
         <div class="flex-container">
-          <button
-            href="src/portefolio/portefolio.html"
-            class="button-48 menu-item"
-          >
-            <span>PORTEFOLIO</span>
+          <button class="button-48 menu-item">
+            <a href="src/portefolio/portefolio.html">PORTEFOLIO</a>
           </button>
-          <button href="src/contact/contact.html" class="button-48 menu-item">
-            <span>CONTACT</span>
+          <button class="button-48 menu-item">
+            <a href="src/contact/contact.html">CONTACT</a>
           </button>
-          <button href="src/about/about.html" class="button-48 menu-item">
-            <span>ABOUT</span>
+          <button class="button-48 menu-item">
+            <a href="src/about/about.html">ABOUT</a>
           </button>
         </div>
       </header>
@@ -43,8 +41,8 @@
             The digital art done by hand. Characters, fanarts, landscapes,
             original characters, all done with fun and motivation.
           </p>
-          <button href="src/contact/contact.html" class="button-48">
-            <span>P U R C H A S E</span>
+          <button class="button-48">
+            <a href="src/contact/contact.html">P U R C H A S E</a>
           </button>
         </div>
         <div class="slider-show">
@@ -91,34 +89,61 @@
         </div>
       </div>
     </div>
-    <div>
-      <h2>preview of prices</h2>
-      <span>
-        <ul>
-          <li><src>image 1</src></li>
-          <li><src>image 2</src></li>
-          <li><src>image 3</src></li>
-          <li><src>image 4</src></li>
-        </ul>
-      </span>
-    </div>
-    <div>
-      <div>
-        <p>custom text</p>
-        <p>- author in bold</p>
+  
+    <div class="flex-container black vertical">
+      <h2>Commission Prices</h2>
+      <div class="flex-container-commissions" id="container">
+        <div class="commission-item">
+          <div class="commission-image wrap">
+            <img src="resources/Athaum_art_sketch.jpeg"/>
+            <p>Simple Sketch</p></div>
+          <p>Sketch <p class="bold">50$</p></p>
+        </div>
+        <div class="commission-item">
+          <div class="commission-image wrap">
+            <img src="resources/Athaum_art_raiden_square.jpeg"/>
+            <p>Colored Portrait of a character</p>
+          </div>
+          <p>Portrait <p class="bold">70$</p></p>
+        </div>
+        <div class="commission-item">
+          <div class="commission-image wrap">
+            <img src="resources/Athaum_art_full_body.jpeg"/>
+            <p>Colored full body of a character</p>
+          </div>
+          <p>Full body <p class="bold">150$</p></p>
+        </div>
+        <div class="commission-item">
+          <div class="commission-image wrap">
+            <img src="resources/Athaum_art_kanata_square.jpeg"/>
+            <p>Full body + background</p></div>
+          <p>Complete piece <p class="bold">200$</p></p>
+        </div>
+      </div>
+      </div>
+    <div class="quote-section">
+      <div class="flex-container flex-quote">
+        <p class="quote">This is an inspiring quote, or whatever you want it to be. 
+          Maybe it's just filling up space, or maybe poeple will actually read it. 
+          Who knows ? All i know is that it looks nice.</p>
+        <p class="author">- Athaum, an artist that draws for fun</p>
       </div>
     </div>
-    <div>
-      <span>
-        <div>
-          <h5>some text title</h5>
-          <p>some text</p>
+    <div class="contact-section">
+      <div class="flex-container">
+        <div class="contact">
+          <p class="bold">Want something specific ? Message me !</p>
+          <p>I take all specific commissions, we can discuss over it and make arrangements. 
+            Just send me a message or a mail.</p>
         </div>
-        <a href="src/contact/contact.html"><button>contact</button></a>
-      </span>
+        <button class="button-48 contact">
+          <a href="src/contact/contact.html">CONTACT</a>
+        </button>
+      </div>
     </div>
-    <footer>
-      <p>copyrights</p>
+  </div>
+    <footer class="footer">
+      <p>Copyrights @ Athaum art 2022</p>
     </footer>
   </body>
 </html>
